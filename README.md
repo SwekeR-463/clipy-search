@@ -58,3 +58,63 @@ Traditional search engines rely heavily on keywords or exact matches, which can 
 ![Screenshot 2025-01-04 103606](https://github.com/user-attachments/assets/597d79b8-1c7c-4ebb-9757-cf29bfdb705b)
 
 ![Screenshot 2025-01-04 103659](https://github.com/user-attachments/assets/90c6b4eb-ebb8-47b3-b56f-083a4e206154)
+
+### Setup & Usage
+
+#### Setup
+
+1. Clone the Repository
+```python
+git clone https://github.com/SwekeR-463/clipy-search.git
+cd clipy-search
+```
+
+2. Install Dependencies
+Create a virtual environment and install the required libraries:
+```python
+python -m venv env
+source env/bin/activate # for linux/macOS
+env\Scripts\activate # for windows
+pip install -r requirements.txt
+```
+
+3. Download Pretrained CLIP Model The project uses OpenAI's `clip-vit-base-patch32`. It will automatically download when the code is executed.
+
+4. GPU Support Ensure that PyTorch is installed with CUDA support to leverage GPU acceleration. You can check if PyTorch detects your GPU:
+```python
+import torch
+print(torch.cuda.is_available())
+```
+
+---
+
+#### Usage
+
+Once the setup is complete, you can run the script to perform hybrid search.
+
+1. Run the Script
+```python
+python app.py
+```
+
+2. Peform Searches
+
+* Text Query: Enter a text description, such as:
+```python
+query = "red tshirts for men"
+search_fashion(query, k=5, mode="text")
+```
+
+* Image Query: Provide an image (e.g., query_image.jpg) and run:
+```python
+from PIL import Image
+query_image = Image.open("query_image.jpg")
+search_fashion(query_image, k=5, mode="image")
+```
+The system will retrieve products visually similar to the input image.
+
+3. Results Visualization The search results include:
+* Product metadata like productDisplayName and baseColour.
+* Images of the retrieved products.
+
+---
