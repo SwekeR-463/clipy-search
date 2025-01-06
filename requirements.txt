@@ -1,0 +1,7 @@
+datasets
+faiss-gpu 
+transformers 
+torch 
+torchvision
+matplotlib
+Pillow
