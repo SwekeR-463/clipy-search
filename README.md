@@ -5,7 +5,7 @@ This project demonstrates a hybrid search engine for fashion products, enabling 
 ---
 
 ### Dataset
-The Fashion Product Images Small Dataset from [Hugging Face](https://huggingface.co/datasets/ashraq/fashion-product-images-small) forms the foundation of this project. It contains over 44,000 product images alongside rich metadata such as category, color, gender, and product names. The hybrid search engine combines the semantic power of CLIP embeddings with the scalability of FAISS indexing to deliver fast and accurate search results.
+The Fashion Product Images Small Dataset from [Hugging Face](https://huggingface.co/datasets/ashraq/fashion-product-images-small) for this project. It contains over 44k product images alongside rich metadata such as category, color, gender, and product names. The hybrid search engine combines the semantic power of CLIP embeddings with the scalability of FAISS indexing to deliver fast and accurate search results.
 
 ---
 
@@ -97,7 +97,7 @@ Once the setup is complete, you can run the script to perform hybrid search.
 python app.py
 ```
 
-2. Peform Searches
+2. Perform Searche
 
 * Text Query: Enter a text description, such as:
 ```python
